@@ -43,4 +43,4 @@ jobs:
       # Subir archivos compilados a S3
       - name: Deploy to S3
         run: |
-          aws s3 sync dist/aws-angular-s3 s3://${{ secrets.AWS_BUCKET_NAME }} --delete
+          aws s3 sync dist/aws-angular-s3/browser/ s3://${{ secrets.AWS_BUCKET_NAME }} --delete
